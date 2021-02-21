@@ -1,0 +1,60 @@
+{
+    "name": "dcolsay/laravel-support",
+    "description": "A set of useful class for laravel",
+    "keywords": [
+        "dcolsay",
+        "laravel",
+        "php"
+    ],
+    "homepage": "https://github.com/dcolsay/laravel-support",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Boris DEHOUMON",
+            "email": "borisdehoumon@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.4|^8.0",
+        "spatie/laravel-package-tools": "^1.1",
+        "illuminate/contracts": "^7.0|^8.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.0",
+        "phpunit/phpunit": "^9.3",
+        "spatie/laravel-ray": "^1.9",
+        "livewire/livewire": "^2.0",
+        "vimeo/psalm": "^4.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Dcolsay\\Support\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Dcolsay\\Support\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "psalm": "vendor/bin/psalm",
+        "test": "vendor/bin/phpunit --colors=always",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-main": "1.0-dev"
+        },
+        "laravel": {
+            "providers": [
+                "Dcolsay\\Support\\SupportServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
